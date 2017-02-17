@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.marshall.kalkulator.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView_main"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="8"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView_main"
+        android:layout_toEndOf="@+id/button_7"
+        android:id="@+id/button_8"
+        android:onClick="writeNumber" />
+
+    <Button
+        android:text="9"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView_main"
+        android:layout_toEndOf="@+id/button_8"
+        android:id="@+id/button_9"
+        android:onClick="writeNumber" />
+
+    <Button
+        android:text="."
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button_1"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button_dot"
+        android:onClick="writeDot" />
+
+    <Button
+        android:text="0"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button_2"
+        android:layout_toEndOf="@+id/button_1"
+        android:id="@+id/button_0"
+        android:onClick="writeNumber" />
+
+    <Button
+        android:text="+"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button_minus"
+        android:layout_toEndOf="@+id/button_equals"
+        android:id="@+id/button_plus"
+        android:onClick="writeOperation" />
+
+    <Button
+        android:text="History"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button_0"
+        android:layout_toEndOf="@+id/button_dot"
+        android:id="@+id/button_history"
+        android:onClick="openHistory" />
+
+    <Button
+        android:text="5"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_5"
+        android:layout_alignBaseline="@+id/button_4"
+        android:layout_alignBottom="@+id/button_4"
+        android:layout_toEndOf="@+id/button_7"
+        android:onClick="writeNumber" />
+
+    <Button
+        android:text="6"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_6"
+        android:onClick="writeNumber"
+        android:layout_alignBaseline="@+id/button_5"
+        android:layout_alignBottom="@+id/button_5"
+        android:layout_toEndOf="@+id/button_2" />
+
+    <Button
+        android:text="7"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_7"
+        android:onClick="writeNumber"
+        android:layout_below="@+id/textView_main"
+        android:layout_alignEnd="@+id/button_dot" />
+
+    <Button
+        android:text="4"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_4"
+        android:onClick="writeNumber"
+        android:layout_below="@+id/button_7"
+        android:layout_toStartOf="@+id/button_5" />
+
+    <Button
+        android:text="/"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_division"
+        android:onClick="writeOperation"
+        android:layout_above="@+id/button_6"
+        android:layout_toEndOf="@+id/button_9" />
+
+    <Button
+        android:text="*"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_multiplication"
+        android:onClick="writeOperation"
+        android:layout_alignBaseline="@+id/button_6"
+        android:layout_alignBottom="@+id/button_6"
+        android:layout_toEndOf="@+id/button_3" />
+
+    <Button
+        android:text="-"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_minus"
+        android:onClick="writeOperation"
+        android:layout_alignBaseline="@+id/button_3"
+        android:layout_alignBottom="@+id/button_3"
+        android:layout_toEndOf="@+id/button_3" />
+
+    <Button
+        android:text="C"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_clear"
+        android:onClick="clear"
+        android:layout_alignBaseline="@+id/button_history"
+        android:layout_alignBottom="@+id/button_history"
+        android:layout_toEndOf="@+id/button_history" />
+
+    <Button
+        android:text="="
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_equals"
+        android:onClick="calculate"
+        android:layout_above="@+id/button_clear"
+        android:layout_toEndOf="@+id/button_0" />
+
+    <Button
+        android:text="2"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_2"
+        android:onClick="writeNumber"
+        android:layout_below="@+id/button_4"
+        android:layout_toEndOf="@+id/button_4" />
+
+    <Button
+        android:text="1"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_1"
+        android:onClick="writeNumber"
+        android:layout_alignBaseline="@+id/button_2"
+        android:layout_alignBottom="@+id/button_2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="3"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_3"
+        android:onClick="writeNumber"
+        android:layout_alignBaseline="@+id/button_2"
+        android:layout_alignBottom="@+id/button_2"
+        android:layout_toEndOf="@+id/button_5" />
+
+</RelativeLayout>
